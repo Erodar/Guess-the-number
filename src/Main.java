@@ -43,23 +43,25 @@ public class Main {
             if (TurnCount == 11) {
 
                     System.out.println("The correct number was " + RightNumber);
-                    Scanner PlayAgain = new Scanner(System.in);
-                    System.out.println("Would you like to play again? y/n");
-                    String YesSir = String.valueOf('y');
-                    String NoSir = String.valueOf('n');
-                    String PlayAgainChoice = PlayAgain.nextLine();
-                    if (PlayAgainChoice.equals(YesSir)) {
-                        RightNumber = rand.nextInt(1001);
-                        TurnCount = 1;
+                    while (TurnCount == 11) {
+                        Scanner PlayAgain = new Scanner(System.in);
+                        System.out.println("Would you like to play again? y/n");
+                        String YesSir = String.valueOf('y');
+                        String NoSir = String.valueOf('n');
+                        String PlayAgainChoice = PlayAgain.nextLine();
+                        if (PlayAgainChoice.equals(YesSir)) {
+                            RightNumber = rand.nextInt(1001);
+                            TurnCount = 1;
+                        } else if (PlayAgainChoice.equals(NoSir)) {
+
+                            GuessingNow = false;
+                            System.out.println("Thank-a you for-a playing my-a game!");
+                            break;
+
+                        } else {
+                            System.out.println("Please choose a valid option");
+                        }
                     }
-
-                    else if (PlayAgainChoice.equals(NoSir)) {
-
-                        GuessingNow = false;
-                        System.out.println("Thank-a you for-a playing my-a game!");
-
-                    }
-
                 }
             }
         }
