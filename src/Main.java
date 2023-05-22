@@ -49,7 +49,7 @@ public class Main {
         }
 
         else if (PlayAgainChoice.equals(NoSir)) {
-            System.out.printf("You won %s times! \n", wincounter);
+            System.out.printf("You won %s time(s)! \n", wincounter);
             System.out.println("Thank-a you for-a playing my-a game!");
         }
 
