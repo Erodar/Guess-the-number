@@ -4,20 +4,19 @@ import java.util.Scanner;
 public class Main {
     public static int wincounter = 0;
     public static void main(String[] args) {
-        playGame();
+        PlayGame();
     }
 
-    public static void playGame() {
+    public static void PlayGame() {
 
         Random rand = new Random();
         int RightNumber = rand.nextInt(1001);
-        int NumberGuess = 0;
+        System.out.println("Guess the number: ");
 
-        for (int i =1; i < 10; i++) {
+        for (int i =0; i < 10; i++) {
 
             Scanner NumGuess = new Scanner(System.in);
-            System.out.println("This is attempt " + i);
-            System.out.println("Guess the number: ");
+            int NumberGuess = 0;
 
             if (NumGuess.hasNextInt()) {
                 NumberGuess = NumGuess.nextInt();
@@ -35,6 +34,9 @@ public class Main {
             } else {
                 System.out.println("Guess lower!");
             }
+            if (i == 7) {
+                System.out.println("Three guesses left!");
+            }
         }
 
         System.out.println("The correct number was " + RightNumber);
@@ -45,7 +47,7 @@ public class Main {
         String PlayAgainChoice = PlayAgain.nextLine();
 
         if (PlayAgainChoice.equals(YesSir)) {
-           playGame();
+           PlayGame();
         }
 
         else if (PlayAgainChoice.equals(NoSir)) {
