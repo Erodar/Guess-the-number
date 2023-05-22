@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class Main {
     public static int wincounter = 0;
     public static void main(String[] args) {
-        playgame();
+        playGame();
     }
 
-    public static void playgame() {
+    public static void playGame() {
 
         Random rand = new Random();
         int RightNumber = rand.nextInt(1001);
@@ -45,7 +45,7 @@ public class Main {
         String PlayAgainChoice = PlayAgain.nextLine();
 
         if (PlayAgainChoice.equals(YesSir)) {
-           playgame();
+           playGame();
         }
 
         else if (PlayAgainChoice.equals(NoSir)) {
